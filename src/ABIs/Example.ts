@@ -1,1 +1,1 @@
-export const EXAMPLE_ABI = [];
+export const EXAMPLE_ABI = {};
