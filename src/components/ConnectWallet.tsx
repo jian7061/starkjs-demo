@@ -1,6 +1,6 @@
 import { useStarknet, useConnectors } from '@starknet-react/core';
 
-export default function ConnectWallet() {
+export const ConnectWallet = () => {
   const { account } = useStarknet();
   const { available, connect, disconnect } = useConnectors();
 
@@ -22,4 +22,4 @@ export default function ConnectWallet() {
       ))}
     </div>
   );
-}
+};

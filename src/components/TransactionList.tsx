@@ -11,7 +11,7 @@ function TransactionItem({ transaction }: { transaction: Transaction }) {
   );
 }
 
-export function TransactionList() {
+export const TransactionList = () => {
   const { transactions } = useStarknetTransactionManager();
   return (
     <ul>
@@ -22,4 +22,4 @@ export function TransactionList() {
       ))}
     </ul>
   );
-}
+};
