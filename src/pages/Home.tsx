@@ -1,10 +1,21 @@
-import React,{ useMemo, useState } from 'react';
-import { useStarknetCall } from '@starknet-react/core'
-import { toBN } from 'starknet/dist/utils/number'
-
+import React, { useMemo, useState } from 'react';
+import { useStarknetCall } from '@starknet-react/core';
+import { toBN } from 'starknet/dist/utils/number';
+import { Button } from '@chakra-ui/react';
 
 export const Home = () => {
-  const [watch, setWatch] = useState(true)
+  const [watch, setWatch] = useState(true);
 
-  return <div>home</div>;
+  return (
+    <div>
+      <Button
+        colorScheme='teal'
+        _hover={{
+          background: 'white',
+          color: 'teal.500',
+        }}>
+        Hover me
+      </Button>
+    </div>
+  );
 };
