@@ -3,7 +3,7 @@ import { Home, Sign, Token } from './pages';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { getInstalledInjectedConnectors, StarknetProvider } from '@starknet-react/core';
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
-
+import { Provider } from 'starknet';
 const colors = {
   brand: {
     900: '#1a365d',
@@ -19,7 +19,10 @@ function App() {
 
   return (
     <ChakraProvider>
-      <StarknetProvider connectors={connectors} autoConnect>
+      <StarknetProvider
+        connectors={connectors}
+        autoConnect
+        defaultProvider={new Provider({ baseUrl: 'http://localhost:500' })}>
         <Router>
           <Routes>
             <Route path='/' element={<Home />} />
