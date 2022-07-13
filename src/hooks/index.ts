@@ -1,2 +1,1 @@
-export * from './useCounterContract';
-export * from './useTokenContract';
+export * from './useExampleContract';

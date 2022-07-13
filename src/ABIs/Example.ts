@@ -1,1 +1,46 @@
-export const EXAMPLE_ABI = {};
+export const EXAMPLE_ABI = [
+  {
+    inputs: [
+      {
+        name: 'amount',
+        type: 'felt',
+      },
+    ],
+    name: 'incrementCounter',
+    outputs: [
+      {
+        name: 'prev_count',
+        type: 'felt',
+      },
+      {
+        name: 'new_count',
+        type: 'felt',
+      },
+    ],
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'counter',
+    outputs: [
+      {
+        name: 'count',
+        type: 'felt',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'lastCaller',
+    outputs: [
+      {
+        name: 'address',
+        type: 'felt',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+];
