@@ -7,33 +7,8 @@ import {
   useStarknetInvoke,
   useStarknetTransactionManager,
   Transaction,
-  useStarknet,
-  useConnectors,
 } from '@starknet-react/core';
 import { useExampleContract } from '../hooks';
-
-const Account = () => {
-  const { account } = useStarknet();
-  const { available, connect, disconnect } = useConnectors();
-  if (account) {
-    return (
-      <div>
-        <p>Account: {account}</p>
-        <button onClick={() => disconnect()}>Disconnect</button>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      {available.map((connector) => (
-        <button key={connector.id()} onClick={() => connect(connector)}>
-          {`Connect ${connector.name()}`}
-        </button>
-      ))}
-    </div>
-  );
-};
 
 const Block = () => {
   const { data: block, error } = useStarknetBlock();
@@ -139,7 +114,6 @@ const TransactionManager = () => {
 export const Home = () => {
   return (
     <div>
-      <Account />
       <Block />
       <ContractCall />
       <ContractInvoke />
