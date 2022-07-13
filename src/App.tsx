@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Home, Sign, Token } from './pages';
+import { Home } from './pages';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { getInstalledInjectedConnectors, StarknetProvider } from '@starknet-react/core';
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
@@ -26,8 +26,6 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/second' element={<Sign />} />
-            <Route path='/third' element={<Token />} />
           </Routes>
         </Router>
       </StarknetProvider>
