@@ -2,8 +2,6 @@ import React, { useMemo, useState } from 'react';
 import { toBN } from 'starknet/dist/utils/number';
 import { Button } from '@chakra-ui/react';
 import {
-  StarknetProvider,
-  useContract,
   useStarknetBlock,
   useStarknetCall,
   useStarknetInvoke,
@@ -11,7 +9,6 @@ import {
   Transaction,
   useStarknet,
   useConnectors,
-  getInstalledInjectedConnectors,
 } from '@starknet-react/core';
 import { useExampleContract } from '../hooks';
 
